@@ -1,6 +1,10 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const PORT = 8000
+
+app.use(express.static(__dirname + '/public'))
+app.use(cors())
 
 const rappers = {
   '21 savage': {
